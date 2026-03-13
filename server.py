@@ -1,3 +1,5 @@
+
+
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from datetime import datetime
@@ -13,7 +15,7 @@ class Telemetry(BaseModel):
     pump: dict
 
 # Имя файла для хранения истории
-DB_FILE = "heating_log.csv"
+DB_FILE = r"C:\My projects\smart-boiler-monitor\heating_log.csv"
 
 # Инициализируем CSV файл заголовками, если его еще нет
 if not os.path.exists(DB_FILE):
